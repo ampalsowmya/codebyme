@@ -1,0 +1,7 @@
+class Solution(object):
+    def moveZeroes(self, nums):
+        l = 0  # Pointer for placing non-zero elements
+        for r in range(len(nums)):  # 'r' goes through each index in the list
+            if nums[r] != 0:
+                nums[l], nums[r] = nums[r], nums[l]
+                l += 1
